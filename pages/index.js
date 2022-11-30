@@ -28,10 +28,10 @@ export default function Home() {
                 <p>Do some &quot;We shouldn&apos;t be doing this&quot; shit!</p>
               </span>
               {data.map((ele, index) => (
-                <Link href={ele.endpoint} key={index} passHref>
+                <Link href={`/${ele.endpoint}`} key={index} passHref>
                   <motion.figure
                     className={Styles.card}
-                    layoutId={`por_${ele.endpoint.slice(1)}`}
+                    layoutId={`por_${ele.endpoint}`}
                     transition={{ duration: 0.5 }}
                   >
                     <Image src={ele.portrait} height={400} width={300} alt="" />

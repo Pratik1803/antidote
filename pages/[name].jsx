@@ -16,13 +16,11 @@ function Index() {
 
   let activeImg = 0;
 
-  const gallery = data.filter(
-    (ele) => ele.endpoint.slice(1) === router.query.name
-  )[0].gallery;
+  const gallery = data.filter((ele) => ele.endpoint === router.query.name)[0];
 
   function forward() {
     activeImg++;
-    if (activeImg >= gallery.length) {
+    if (activeImg >= gallery.gallery.length) {
       activeImg = 0;
     }
     mainSliderRef.current.style.transform = `translateX(-${100 * activeImg}vw)`;
@@ -35,7 +33,7 @@ function Index() {
   function backward() {
     activeImg--;
     if (activeImg < 0) {
-      activeImg = gallery.length - 1;
+      activeImg = gallery.gallery.length - 1;
     }
     mainSliderRef.current.style.transform = `translateX(-${100 * activeImg}vw)`;
     smallSliderRef.current.style.transform = `translate(${
@@ -109,7 +107,7 @@ function Index() {
             alt=""
           />
         </motion.figure>
-        {gallery?.map((ele, index) => {
+        {gallery?.gallery?.map((ele, index) => {
           if (index == 0) return;
           return (
             <div className={Styles.sliderImgWrapper} key={index}>
@@ -126,7 +124,7 @@ function Index() {
       >
         <section className={Styles.images}>
           <div className={Styles.activeImage} ref={smallSliderRef}></div>
-          {gallery?.map((ele, index) => {
+          {gallery?.gallery?.map((ele, index) => {
             return (
               <div
                 className={Styles.smallSliderImage}

@@ -1,7 +1,7 @@
 export const data = [
   {
     img: "/portrait.webp",
-    endpoint: "/japan",
+    endpoint: "japan",
     title: "Japan",
     portrait: "/japan/japan_por.png",
     gallery: [
@@ -15,7 +15,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/new_zealand",
+    endpoint: "new_zealand",
     title: "New Zealand",
     portrait: "/new_zealand/new_zealand_por.png",
     gallery: [
@@ -29,7 +29,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/scotland",
+    endpoint: "scotland",
     title: "Scotland",
     portrait: "/scotland/scotland_por.png",
     gallery: [
@@ -43,7 +43,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/norway",
+    endpoint: "norway",
     title: "Norway",
     portrait: "/norway/norway_por.png",
     gallery: [
@@ -57,7 +57,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/canada",
+    endpoint: "canada",
     title: "Canada",
     portrait: "/canada/canada_por.png",
     gallery: [
@@ -71,7 +71,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/denmark",
+    endpoint: "denmark",
     title: "Denmark",
     portrait: "/denmark/denmark_por.png",
     gallery: [
@@ -85,7 +85,7 @@ export const data = [
   },
   {
     img: "/portrait.webp",
-    endpoint: "/faroe_islands",
+    endpoint: "faroe_islands",
     title: "Faroe Islands",
     portrait: "/faroe_islands/faroe_island_por.png",
     gallery: [
