@@ -33,14 +33,14 @@ function Header() {
         <p>Quebec, Fr</p>
       </Stack>
       <h1 className={Styles.name}>Antidote</h1>
-      <p>
+      <p style={{ cursor: "pointer" }}>
         <strong onClick={toggleMenu}>Menu</strong>
       </p>
       <section className={Styles.menu} ref={menuRef}>
         <a href="tel:+917058577538">
           <div className={Styles.contact} ref={contactRef}>
             <span>
-              <h1>Contact</h1>
+              <h2>Contact</h2>
               <div className={Styles.underline}></div>
             </span>
             <p>+91 70585 77538</p>
@@ -48,7 +48,7 @@ function Header() {
         </a>
         <div className={Styles.socials} ref={socialsRef}>
           <span>
-            <h1>Socials</h1>
+            <h2>Socials</h2>
             <div className={Styles.underline}></div>
           </span>
           <span className={Styles.logos}>

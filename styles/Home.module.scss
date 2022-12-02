@@ -47,7 +47,7 @@
       height: 400px;
       width: 300px;
       // overflow: hidden;
-      transition: 0.3s ease-in-out;
+      // transition: 0.3s ease-in-out;
       img {
         height: 400px;
         width: 300px;
@@ -84,7 +84,7 @@
         transition: 0.3s ease-in-out;
       }
       &:hover {
-        transform: translateY(-10px) !important;
+        // transform: translateY(-10px) !important;
         &::before {
           opacity: 1;
         }
@@ -98,6 +98,8 @@
     position: fixed;
     bottom: 5vh;
     left: 2vw;
+    color: var(--black);
+    text-decoration: none;
   }
 }
 

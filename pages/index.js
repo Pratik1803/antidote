@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Styles from "../styles/Home.module.scss";
 import Wrapper from "../components/wrapper/Wrapper";
@@ -42,11 +42,14 @@ export default function Home() {
                 </Link>
               ))}
             </motion.div>
-            <p className={Styles.email}>
+            <a
+              href="mailto:pratikvaidya1803@gmail.com"
+              className={Styles.email}
+            >
               <strong>Email</strong>: pratikvaidya1803@gmail.com
               <br />
               EN
-            </p>
+            </a>
           </main>
         </Wrapper>
       )}

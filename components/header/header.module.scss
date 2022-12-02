@@ -14,7 +14,8 @@
   z-index: 3;
   background-color: var(--white);
   h1,
-  p {
+  p,
+  h2 {
     background-color: var(--white);
     background-clip: text;
     color: transparent;
@@ -42,19 +43,19 @@
     align-items: center;
     overflow: hidden;
     transition: 0.5s var(--sineInOutCubic);
-    h1 {
+    h2 {
       font-size: 48px;
     }
     .contact,
     .socials {
       transform: translateY(20px);
       opacity: 0;
-      transition: 0.5s var(--easeInBack);
+      transition: 0.5s ease-in;
       span {
         position: relative;
         .underline {
           position: absolute;
-          bottom: 15px;
+          bottom: 5px;
           height: 1px;
           width: 00%;
           background: var(--white);
