@@ -25,7 +25,10 @@ export default function Home() {
               className={Styles.wrapper}
             >
               <span>
-                <p>Do some &quot;We shouldn&apos;t be doing this&quot; shit!</p>
+                <h1>Shift + </h1>
+                <div className={Styles.scrollerAnimation}>
+                  <div className={Styles.wheel}></div>
+                </div>
               </span>
               {data.map((ele, index) => (
                 <Link href={`/${ele.endpoint}`} key={index} passHref>
@@ -39,6 +42,11 @@ export default function Home() {
                 </Link>
               ))}
             </motion.div>
+            <p className={Styles.email}>
+              <strong>Email</strong>: pratikvaidya1803@gmail.com
+              <br />
+              EN
+            </p>
           </main>
         </Wrapper>
       )}

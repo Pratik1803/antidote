@@ -99,19 +99,27 @@ function Index() {
         <motion.figure
           layoutId={`por_${router.query.name}`}
           transition={{ duration: 0.5 }}
+          className={Styles.sliderImgWrapper}
         >
           <Image
             src={`/${router.query.name}/${router.query.name}_por.png`}
             height={400}
             width={300}
             alt=""
+            className={Styles.img}
           />
         </motion.figure>
         {gallery?.gallery?.map((ele, index) => {
           if (index == 0) return;
           return (
             <div className={Styles.sliderImgWrapper} key={index}>
-              <Image src={ele} width={200} height={400} alt="" />
+              <Image
+                src={ele}
+                className={Styles.img}
+                width={200}
+                height={400}
+                alt=""
+              />
             </div>
           );
         })}

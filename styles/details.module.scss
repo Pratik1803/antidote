@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background: #fff;
+  background: var(--white);
   overflow-x: hidden;
-  img {
+  .img {
     width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+    height: 85vh;
+    object-fit: contain;
   }
   .heading {
     position: fixed;
@@ -31,6 +31,7 @@
     width: 5vw;
     height: 5vw;
     z-index: 2;
+    mix-blend-mode: difference;
   }
   .left_top {
     border-top: 1px solid #fff;
@@ -106,6 +107,7 @@
     box-shadow: none;
     cursor: pointer;
     transition: 1s var(--sineInOutQuint);
+    mix-blend-mode: difference;
     .linev,
     .lineh {
       width: 1px;

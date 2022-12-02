@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--white);
   .wrapper {
     width: fit-content;
     overflow-x: scroll;
@@ -15,10 +16,30 @@
     // animation: fade-in 1s var(--sineInOutQuint);
     span {
       padding: 0 5vw;
-      p {
-        width: 20vw;
-        font-size: 24px;
-        font-weight: bold;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      h1 {
+        width: fit-content;
+        white-space: nowrap;
+      }
+      .scrollerAnimation {
+        width: 40px;
+        height: 60px;
+        border-radius: 200px;
+        border: 3px solid var(--black);
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        .wheel {
+          width: 5px;
+          height: 7.5px;
+          background-color: var(--black);
+          border-radius: 100px;
+          animation: wheeler 2s infinite var(--sineInOutQuint);
+        }
       }
     }
     .card {
@@ -31,7 +52,7 @@
         height: 400px;
         width: 300px;
         object-fit: cover;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
       }
       &::after {
         content: " ";
@@ -59,6 +80,7 @@
         background: rgba(0, 0, 0, 0.5);
         filter: blur(15px);
         opacity: 0;
+        pointer-events: none;
         transition: 0.3s ease-in-out;
       }
       &:hover {
@@ -72,13 +94,11 @@
       }
     }
   }
-}
-.main2 {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  .email {
+    position: fixed;
+    bottom: 5vh;
+    left: 2vw;
+  }
 }
 
 @keyframes fade-in {
@@ -89,5 +109,17 @@
   100% {
     opacity: 1;
     transform: translateX(00px);
+  }
+}
+
+@keyframes wheeler {
+  0% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
